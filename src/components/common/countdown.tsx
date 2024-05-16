@@ -7,7 +7,7 @@ import { BGCountdown } from "@/components/background/wood";
 import { ShowCounter, useCountdown } from "./countdown-timer";
 
 export function Countdown() {
-  const [days, hours, minutes, seconds] = useCountdown("2024-05-20");
+  const [days, hours, minutes, seconds] = useCountdown("2024-06-08");
 
   return (
     <section className="mt-36 flex flex-col items-center bg-[#E3BB67] pb-20 pt-10">
