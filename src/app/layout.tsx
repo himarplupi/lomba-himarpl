@@ -1,59 +1,29 @@
-import { Montserrat as FontSans } from "next/font/google";
 import localFont from "next/font/local";
 
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const fontSerif = localFont({
+const fontWesternBangBang = localFont({
   src: [
     {
-      path: "./fonts/minion-pro/MinionPro-Regular.otf",
+      path: "./fonts/western-bang-bang/western-bang-bang-regular.ttf",
       weight: "400",
       style: "normal",
-    },
-    {
-      path: "./fonts/minion-pro/MinionPro-It.otf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "./fonts/minion-pro/MinionPro-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/minion-pro/MinionPro-MediumIt.otf",
-      weight: "500",
-      style: "italic",
-    },
-    {
-      path: "./fonts/minion-pro/MinionPro-Semibold.otf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/minion-pro/MinionPro-SemiboldIt.otf",
-      weight: "600",
-      style: "italic",
-    },
-    {
-      path: "./fonts/minion-pro/MinionPro-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./fonts/minion-pro/MinionPro-BoldIt.otf",
-      weight: "700",
-      style: "italic",
     },
   ],
-  variable: "--font-serif",
+  variable: "--font-western",
+});
+
+const fontWildrodeo = localFont({
+  src: [
+    {
+      path: "./fonts/wildrodeo/ifc-wildrodeo-bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-wildrodeo",
 });
 
 export const metadata = {
@@ -78,8 +48,8 @@ export default function RootLayout({
       <body
         className={cn(
           "bg-background font-sans antialiased",
-          fontSans.variable,
-          fontSerif.variable
+          fontWesternBangBang.variable,
+          fontWildrodeo.variable,
         )}
       >
         {children}
