@@ -10,7 +10,7 @@ export function Countdown() {
   const [days, hours, minutes, seconds] = useCountdown("2024-06-08");
 
   return (
-    <section className="mt-36 flex flex-col items-center bg-[#E3BB67] pb-20 pt-10">
+    <section className="mt-36 flex flex-col items-center bg-[#E3BB67] bg-[url('https://raw.githubusercontent.com/himarplupi/assets-himarpl/main/lomba/bg-wave-sand.jpg')] bg-[length:64px_64px] bg-repeat pb-20 pt-10">
       <h2 className="scroll-m-20 pb-2 font-wildrodeo text-8xl font-semibold tracking-tight text-[#31180E]">
         Hitung Mundur
       </h2>
