@@ -17,7 +17,7 @@ import {
 
 export function GlobalFooter() {
   return (
-    <footer className="container bg-secondary/25 pt-6 text-secondary-foreground">
+    <footer className="container bg-[#31180E] pt-6 font-serif text-[#E3BB67]">
       <div className="flex flex-col gap-y-6 md:px-8">
         <div className="flex flex-col items-center gap-2 sm:flex-row">
           <Image
@@ -44,9 +44,22 @@ export function GlobalFooter() {
         </div>
       </div>
 
-      <p className="mt-6 rounded-lg py-6 text-center text-sm leading-5">
-        &copy; 2024 HIMARPL UPI, All rights reserved.
-      </p>
+      <div className="mt-6 space-y-1 py-6">
+        <p className="text-center text-sm leading-5">
+          Made with ❤️ by{" "}
+          <a
+            className="underline transition hover:text-[#E6E7CB]"
+            target="_blank"
+            href="https://github.com/dikdns"
+          >
+            Andika E. Kurnia
+          </a>{" "}
+          from department Kominfo.
+        </p>
+        <p className="text-center text-sm leading-5">
+          &copy; 2024 HIMARPL UPI, All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }
@@ -103,7 +116,7 @@ function SocialMediaLinks() {
             }),
           )}
         >
-          <SiTiktok color="hsl(var(--foreground))" className="h-5 w-5" />
+          <SiTiktok color="hsl(var(--background))" className="h-5 w-5" />
         </Link>
       </li>
     </ul>
@@ -116,7 +129,7 @@ function Alamat() {
       <h4 className="scroll-m-20 font-serif text-lg font-semibold tracking-wide">
         Alamat
       </h4>
-      <p className="text-sm leading-4 text-muted-foreground sm:w-64 md:w-96">
+      <p className="text-sm leading-4 text-[#B6924A] sm:w-64 md:w-96">
         Ruang HIMARPL Gedung Sekretariat Jalan Raya Cibiru Km. 15 Bandung 40393
       </p>
     </div>
@@ -133,7 +146,7 @@ function Pranala() {
         <li className="overflow-hidden">
           <Link
             target="_blank"
-            className="inline-block text-sm leading-4 text-muted-foreground hover:underline"
+            className="inline-block text-sm leading-4 text-[#B6924A] hover:underline"
             href="https://himarpl.com"
           >
             Himpunan Mahasiwa Rekayasa Perangkat Lunak
@@ -142,7 +155,7 @@ function Pranala() {
         <li className="overflow-hidden">
           <Link
             target="_blank"
-            className="inline-block text-sm leading-4 text-muted-foreground hover:underline"
+            className="inline-block text-sm leading-4 text-[#B6924A] hover:underline"
             href="https://blog.himarpl.com"
           >
             Blog HIMARPL
@@ -151,7 +164,7 @@ function Pranala() {
         <li className="overflow-hidden">
           <Link
             target="_blank"
-            className="inline-block text-sm leading-4 text-muted-foreground hover:underline"
+            className="inline-block text-sm leading-4 text-[#B6924A] hover:underline"
             href="https://pmb.himarpl.com"
           >
             Penerimaan Mahasiswa Baru HIMARPL
@@ -160,7 +173,7 @@ function Pranala() {
         <li className="overflow-hidden">
           <Link
             target="_blank"
-            className="inline-block text-sm leading-4 text-muted-foreground hover:underline"
+            className="inline-block text-sm leading-4 text-[#B6924A] hover:underline"
             href="https://upi.edu/"
           >
             Universitas Pendidikan Indonesia
@@ -169,7 +182,7 @@ function Pranala() {
         <li className="overflow-hidden">
           <Link
             target="_blank"
-            className="inline-block text-sm leading-4 text-muted-foreground hover:underline"
+            className="inline-block text-sm leading-4 text-[#B6924A] hover:underline"
             href="https://rpl.upi.edu/"
           >
             Rekayasa Perangkat Lunak UPI
@@ -190,7 +203,7 @@ function MediaPartner() {
         <li className="overflow-hidden">
           <Link
             target="_blank"
-            className="inline-block text-sm leading-4 text-muted-foreground hover:underline"
+            className="inline-block text-sm leading-4 text-[#B6924A] hover:underline"
             href="https://github.com/himarplupi/assets-himarpl/blob/main/media-partner/syarat-dan-ketentuan.md"
           >
             Syarat dan Ketentuan

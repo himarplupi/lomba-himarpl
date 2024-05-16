@@ -21,9 +21,9 @@ export function Banner() {
         Rekayasa Perangkat Lunak Universitas Pendidikan Indonesia.
       </p>
 
-      <div className="flex items-center gap-x-2">
+      <div className="flex items-center gap-x-4">
         <FMButton>Daftar Sekarang</FMButton>
-        <Button variant="outline">Buku Panduan</Button>
+        <Button variant="default">Buku Panduan</Button>
       </div>
 
       <div className="absolute -bottom-40 left-0 -z-50 w-full brightness-90">
