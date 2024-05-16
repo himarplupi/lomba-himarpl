@@ -26,6 +26,9 @@ export function Banner() {
         <Button variant="default">Buku Panduan</Button>
       </div>
 
+      <div className="absolute bottom-10 left-56 -z-50 w-full brightness-90">
+        <div className="aspect-square w-64 rounded-full bg-[#F7EE86]" />
+      </div>
       <div className="absolute -bottom-40 left-0 -z-50 w-full brightness-90">
         <DesertMountain1 />
       </div>

@@ -2,7 +2,7 @@
 
 export function PosterTheme() {
   return (
-    <section className="flex">
+    <section id="poster-theme" className="flex">
       <div className="basis-1/3 bg-[#31180E]"></div>
       <div className="basis-2/3 space-y-8 bg-[#7B3018] px-10 py-20">
         <div>

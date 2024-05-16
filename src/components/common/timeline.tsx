@@ -2,7 +2,7 @@
 
 export function Timeline() {
   return (
-    <section className="relative flex">
+    <section id="timeline" className="relative flex">
       <div className="basis-1/3 bg-[#A2672F]"></div>
       <div className="h-[768px] basis-2/3 space-y-8 bg-[#B6924A] px-10 py-20">
         <h2 className="scroll-m-20 font-wildrodeo text-8xl font-semibold tracking-tight text-zinc-50">
