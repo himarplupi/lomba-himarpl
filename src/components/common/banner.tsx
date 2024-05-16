@@ -15,7 +15,7 @@ export function Banner() {
         </h3>
       </div>
 
-      <p className="max-w-[512px] rounded-md bg-zinc-50 bg-opacity-75 px-6 py-2 text-center font-western text-2xl leading-6">
+      <p className="max-w-[512px] rounded-md bg-zinc-50 bg-opacity-75 px-6 py-2 text-center font-serif text-lg leading-6">
         Lomba ini merupakan bagian dari acara Dies Natalis jurusan Rekayasa
         Perangkat Lunak ke-5 yang diselenggarakan oleh Himpunan Mahasiswa
         Rekayasa Perangkat Lunak Universitas Pendidikan Indonesia.

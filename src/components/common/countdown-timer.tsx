@@ -35,11 +35,17 @@ export const ShowCounter = ({
       {isClient && (
         <AnimatePresence>
           <DateTimeDisplay key={days} value={days} type={"Hari"} />
-          <p className="text-9xl">:</p>
+          <p key="item-1" className="text-9xl">
+            :
+          </p>
           <DateTimeDisplay key={hours} value={hours} type={"Jam"} />
-          <p className="text-9xl">:</p>
+          <p key="item-2" className="text-9xl">
+            :
+          </p>
           <DateTimeDisplay key={minutes} value={minutes} type={"Menit"} />
-          <p className="text-9xl">:</p>
+          <p key="item-3" className="text-9xl">
+            :
+          </p>
           <DateTimeDisplay key={seconds} value={seconds} type={"Detik"} />
         </AnimatePresence>
       )}
@@ -68,7 +74,7 @@ export const DateTimeDisplay = ({
         <motion.p className="text-9xl">
           {(value ?? 0) < 10 ? `0${value}` : value}
         </motion.p>
-        <motion.span className="-mt-6 text-xl lowercase">{type}</motion.span>
+        <motion.span className="-mt-6 text-2xl lowercase">{type}</motion.span>
       </motion.div>
     </div>
   );
