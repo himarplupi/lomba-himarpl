@@ -23,17 +23,26 @@ export const ShowCounter = ({
   minutes?: number;
   seconds?: number;
 }) => {
+  // To handle hydration mismatch
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <div className="flex">
-      <AnimatePresence>
-        <DateTimeDisplay key={days} value={days} type={"Hari"} />
-        <p className="text-9xl">:</p>
-        <DateTimeDisplay key={hours} value={hours} type={"Jam"} />
-        <p className="text-9xl">:</p>
-        <DateTimeDisplay key={minutes} value={minutes} type={"Menit"} />
-        <p className="text-9xl">:</p>
-        <DateTimeDisplay key={seconds} value={seconds} type={"Detik"} />
-      </AnimatePresence>
+      {isClient && (
+        <AnimatePresence>
+          <DateTimeDisplay key={days} value={days} type={"Hari"} />
+          <p className="text-9xl">:</p>
+          <DateTimeDisplay key={hours} value={hours} type={"Jam"} />
+          <p className="text-9xl">:</p>
+          <DateTimeDisplay key={minutes} value={minutes} type={"Menit"} />
+          <p className="text-9xl">:</p>
+          <DateTimeDisplay key={seconds} value={seconds} type={"Detik"} />
+        </AnimatePresence>
+      )}
     </div>
   );
 };
