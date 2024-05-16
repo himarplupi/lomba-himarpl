@@ -1,6 +1,7 @@
 import { Banner } from "@/components/common/banner";
 import { Countdown } from "@/components/common/countdown";
 import { PosterTheme } from "@/components/common/poster-theme";
+import { Timeline } from "@/components/common/timeline";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Banner />
       <Countdown />
       <PosterTheme />
+      <Timeline />
     </main>
   );
 }
