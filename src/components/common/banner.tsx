@@ -35,6 +35,7 @@ export function Banner() {
       <div className="absolute -bottom-36 -z-50 w-full brightness-95">
         <Desert1 />
       </div>
+      <div className="absolute -bottom-40 -z-50 h-10 w-full bg-[#A2672F] brightness-95" />
     </section>
   );
 }

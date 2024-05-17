@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 
+import { FlagLeft, FlagRight } from "@/components/background/flag";
 import { BGCountdown } from "@/components/background/wood";
 
 import { ShowCounter, useCountdown } from "./countdown-timer";
@@ -12,7 +13,7 @@ export function Countdown() {
   return (
     <section
       id="countdown"
-      className="mt-36 flex flex-col items-center bg-[#E3BB67] bg-[url('https://raw.githubusercontent.com/himarplupi/assets-himarpl/main/lomba/bg-wave-sand.jpg')] bg-[length:64px_64px] bg-repeat pb-40 pt-20"
+      className="relative mt-36 flex flex-col items-center bg-[#E2BF91] bg-opacity-65 pb-40 pt-20"
     >
       <h2 className="scroll-m-20 pb-2 font-wildrodeo text-8xl font-semibold tracking-tight text-[#31180E]">
         Hitung Mundur
@@ -34,6 +35,13 @@ export function Countdown() {
         </motion.div>
         <BGCountdown />
       </div>
+
+      <div className="absolute top-0 z-10 flex w-full justify-between brightness-95">
+        <FlagLeft />
+        <FlagRight />
+      </div>
+
+      <div className="absolute top-0 -z-10 h-full w-full bg-[url('https://raw.githubusercontent.com/himarplupi/assets-himarpl/main/lomba/bg-wave-sand.jpg')] bg-[length:64px_64px] bg-repeat " />
     </section>
   );
 }
