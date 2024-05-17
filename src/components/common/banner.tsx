@@ -5,7 +5,10 @@ import { Button, FMButton } from "@/components/ui/button";
 
 export function Banner() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center gap-y-4">
+    <section
+      id="banner"
+      className="relative flex min-h-screen flex-col items-center justify-center gap-y-4"
+    >
       <div className="flex flex-col items-center justify-center bg-zinc-50 bg-opacity-75 px-6 md:py-2 ">
         <h1 className="scroll-m-20 font-wildrodeo text-6xl uppercase tracking-tight text-[#7B3018] md:text-8xl lg:text-9xl">
           Lomba Poster

@@ -5,19 +5,22 @@ import { GlobalFooter } from "@/components/common/global-footer";
 import { Navbar } from "@/components/common/navbar";
 import { PosterTheme } from "@/components/common/poster-theme";
 import { Timeline } from "@/components/common/timeline";
+import { ReactLenis } from "@/lib/lenis";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen overflow-hidden xl:container">
-        <Banner />
-        <Countdown />
-        <PosterTheme />
-        <Timeline />
-        <Footer />
-        <GlobalFooter />
-      </main>
+      <ReactLenis root>
+        <main className="overflow-hidden xl:container">
+          <Banner />
+          <Countdown />
+          <PosterTheme />
+          <Timeline />
+          <Footer />
+          <GlobalFooter />
+        </main>
+      </ReactLenis>
     </>
   );
 }

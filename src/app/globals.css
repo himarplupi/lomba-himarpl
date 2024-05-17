@@ -57,6 +57,10 @@
   }
 }
 
+html {
+  overflow: scroll;
+}
+
 .radial-gradient {
   background: radial-gradient(
       circle at 50% 0%,

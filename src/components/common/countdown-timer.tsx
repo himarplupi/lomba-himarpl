@@ -34,19 +34,27 @@ export const ShowCounter = ({
     <div className="flex">
       {isClient && (
         <AnimatePresence>
-          <DateTimeDisplay key={days} value={days} type={"Hari"} />
+          <DateTimeDisplay key={`Hari${days}`} value={days} type={"Hari"} />
           <p key="item-1" className="text-6xl md:text-8xl lg:text-9xl">
             :
           </p>
-          <DateTimeDisplay key={hours} value={hours} type={"Jam"} />
+          <DateTimeDisplay key={`Jam${hours}`} value={hours} type={"Jam"} />
           <p key="item-2" className="text-6xl md:text-8xl lg:text-9xl">
             :
           </p>
-          <DateTimeDisplay key={minutes} value={minutes} type={"Menit"} />
+          <DateTimeDisplay
+            key={`Menit${minutes}`}
+            value={minutes}
+            type={"Menit"}
+          />
           <p key="item-3" className="text-6xl md:text-8xl lg:text-9xl">
             :
           </p>
-          <DateTimeDisplay key={seconds} value={seconds} type={"Detik"} />
+          <DateTimeDisplay
+            key={`Detik${seconds}`}
+            value={seconds}
+            type={"Detik"}
+          />
         </AnimatePresence>
       )}
     </div>
