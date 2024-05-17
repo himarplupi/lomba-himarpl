@@ -115,11 +115,11 @@ const FMButton = ({ className, ...props }: FMButtonProps) => {
           duration: 0.2,
         },
       }}
+      {...props}
       className={cn(
         "radial-gradient relative h-12 rounded-md px-6 py-2 shadow-md",
         className,
       )}
-      {...props}
     >
       <Image
         src={plank}
