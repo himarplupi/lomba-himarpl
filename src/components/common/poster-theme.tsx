@@ -1,6 +1,7 @@
 "use client";
 
 import { HorseShoe } from "@/components/background/horseshoe";
+import { MotionText } from "@/components/motion/text";
 
 export function PosterTheme() {
   return (
@@ -13,19 +14,21 @@ export function PosterTheme() {
       <div className="basis-full space-y-8 bg-[#7B3018] px-10 py-20 md:basis-2/3">
         <div>
           <h2 className="scroll-m-20 font-wildrodeo text-5xl font-semibold tracking-tight text-zinc-50 md:text-7xl lg:text-8xl ">
-            Tema
+            <MotionText text="Tema" />
           </h2>
           <p className="text-pretty font-serif leading-6 text-zinc-100 md:text-lg ">
             {"Tema untuk lomba poster Dies Natalis RPL ke-5 ini adalah "}
-            <u className="underline">“Indonesia Emas VS Indonesia Cemas.”</u>
+            <u className="underline">
+              {'"Indonesia Emas VS Indonesia Cemas."'}
+            </u>
           </p>
         </div>
         <div>
           <h3 className="scroll-m-20 font-wildrodeo text-3xl tracking-tight text-zinc-50 md:text-5xl lg:text-6xl">
-            Subtema
+            <MotionText text="Subtema" />
           </h3>
           <p className="font-serif leading-6 text-zinc-100 md:text-lg ">
-            Subtema untuk Lomba Poster ini adalah sebagai berikut:
+            {"Subtema untuk Lomba Poster ini adalah sebagai berikut:"}
           </p>
           <ol className="ml-4 list-inside list-disc">
             <li className="font-serif leading-6 text-zinc-100 md:text-lg">

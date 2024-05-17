@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import { FlagLeft, FlagRight } from "@/components/background/flag";
 import { BGCountdown } from "@/components/background/wood";
+import { MotionText } from "@/components/motion/text";
 
 import { ShowCounter, useCountdown } from "./countdown-timer";
 
@@ -16,14 +17,19 @@ export function Countdown() {
       className="relative mt-10 flex flex-col items-center bg-[#E2BF91] bg-opacity-65 pb-40 pt-20 md:mt-32 lg:mt-36"
     >
       <h2 className="scroll-m-20 pb-2 font-wildrodeo text-5xl font-semibold tracking-tight text-[#31180E] md:text-7xl lg:text-8xl">
-        Hitung Mundur
+        <MotionText text={"Hitung Mundur"} />
       </h2>
 
       <div className="relative mt-6 flex w-[600px] items-center px-4 md:w-[750px] lg:w-[1000px]">
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ scale: 0.5 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 200,
+          }}
           className="absolute left-0 right-0 z-10 flex items-center justify-center font-western text-[#E6E7CB]"
         >
           <ShowCounter

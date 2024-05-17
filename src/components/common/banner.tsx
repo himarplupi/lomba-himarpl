@@ -1,9 +1,15 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
 import { Desert1, DesertMountain1 } from "@/components/background/desert";
+import { MotionText } from "@/components/motion/text";
 import { Button, FMButton } from "@/components/ui/button";
 
 export function Banner() {
+  const router = useRouter();
+
   return (
     <section
       id="banner"
@@ -11,25 +17,35 @@ export function Banner() {
     >
       <div className="flex flex-col items-center justify-center bg-zinc-50 bg-opacity-75 px-6 md:py-2 ">
         <h1 className="scroll-m-20 font-wildrodeo text-6xl uppercase tracking-tight text-[#7B3018] md:text-8xl lg:text-9xl">
-          Lomba Poster
+          <MotionText text="Lomba Poster" />
         </h1>
-        <h3 className="scroll-m-20 font-wildrodeo text-3xl tracking-tight text-[#7B3018] md:text-5xl lg:text-6xl">
-          Dies Natalis RPL kelima
-        </h3>
+        <motion.h3 className="scroll-m-20 font-wildrodeo text-3xl tracking-tight text-[#7B3018] md:text-5xl lg:text-6xl">
+          <MotionText text="Dies Natalis RPL kelima" />
+        </motion.h3>
       </div>
 
-      <p className="max-w-[512px] rounded-md bg-zinc-50 bg-opacity-75 px-6 py-2 text-center font-serif leading-6 md:text-lg">
-        Lomba ini merupakan bagian dari acara Dies Natalis jurusan Rekayasa
-        Perangkat Lunak ke-5 yang diselenggarakan oleh Himpunan Mahasiswa
-        Rekayasa Perangkat Lunak Universitas Pendidikan Indonesia.
-      </p>
+      <motion.p className="max-w-[512px] rounded-md bg-zinc-50 bg-opacity-75 px-6 py-2 text-center font-serif leading-6 md:text-lg">
+        <MotionText
+          type="multi"
+          text={
+            "Lomba ini merupakan bagian dari acara Dies Natalis jurusan Rekayasa Perangkat Lunak ke-5 yang diselenggarakan oleh Himpunan Mahasiswa Rekayasa Perangkat Lunak Universitas Pendidikan Indonesia."
+          }
+        />
+      </motion.p>
 
-      <div className="flex w-full flex-col items-center gap-y-4 px-8 md:w-[500px] md:flex-row md:gap-x-4">
-        <FMButton className="w-full">Daftar Sekarang</FMButton>
+      <motion.div className="flex w-full flex-col items-center gap-y-4 px-8 md:w-[500px] md:flex-row md:gap-x-4">
+        <FMButton
+          className="w-full"
+          onClick={() => {
+            router.push("https://forms.gle/8Jwc16FX2u8RGkgq5");
+          }}
+        >
+          Daftar Sekarang
+        </FMButton>
         <Button variant="default" className="w-full">
           Buku Panduan
         </Button>
-      </div>
+      </motion.div>
 
       <div className="absolute bottom-10 left-28 -z-50 w-full brightness-90 md:bottom-5 md:left-32 lg:bottom-10 lg:left-56">
         <div className="aspect-square w-32 rounded-full bg-[#F7EE86] md:w-64" />
