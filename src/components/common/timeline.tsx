@@ -1,8 +1,17 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+
 import { MotionText } from "@/components/motion/text";
 
 export function Timeline() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end 200px"],
+  });
+
   return (
     <section id="timeline" className="relative flex">
       <div className="bg-[#E6E7CB] md:basis-1/3"></div>
@@ -12,17 +21,64 @@ export function Timeline() {
         </h2>
         <div className="absolute -top-10 left-0 -z-10 h-full w-full bg-[url('https://raw.githubusercontent.com/himarplupi/assets-himarpl/main/lomba/bg-wave-sand.jpg')] bg-[length:64px_64px] bg-repeat " />
       </div>
-      <div className="absolute top-32 ml-4 flex w-full">
+      <div ref={ref} className="absolute top-32 ml-4 flex w-full">
         <div className="flex basis-1/6 flex-col items-center justify-start md:basis-1/3">
-          <div className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]" />
+          <motion.div
+            initial={{ y: 20, x: -40, scale: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 8,
+              mass: 1,
+            }}
+            viewport={{ once: true }}
+            whileInView={{ y: 0, x: 0, scale: 1 }}
+            className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]"
+          />
 
-          <div className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]" />
+          <motion.div
+            initial={{ y: 20, x: -40, scale: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 8,
+              mass: 1,
+            }}
+            viewport={{ once: true }}
+            whileInView={{ y: 0, x: 0, scale: 1 }}
+            className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]"
+          />
 
-          <div className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]" />
+          <motion.div
+            initial={{ y: 20, x: -40, scale: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 8,
+              mass: 1,
+            }}
+            viewport={{ once: true }}
+            whileInView={{ y: 0, x: 0, scale: 1 }}
+            className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]"
+          />
 
-          <div className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]" />
+          <motion.div
+            initial={{ y: 20, x: -40, scale: 0 }}
+            transition={{
+              type: "spring",
+              stiffness: 50,
+              damping: 8,
+              mass: 1,
+            }}
+            viewport={{ once: true }}
+            whileInView={{ y: 0, x: 0, scale: 1 }}
+            className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]"
+          />
 
-          <div className="absolute top-28 h-96 w-2 bg-[#31180E]" />
+          <motion.div
+            style={{ scaleY: scrollYProgress, originY: 0 }}
+            className="absolute top-28 h-96 w-2 bg-[#31180E]"
+          />
         </div>
         <div className=" mt-20 basis-5/6 space-y-[78px] pr-8 md:basis-2/3 md:space-y-16 md:px-10">
           <div>

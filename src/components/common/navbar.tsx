@@ -34,7 +34,12 @@ export function Navbar() {
         <motion.nav
           key="navbar"
           initial={{ top: -80 }}
-          animate={{ top: 0 }}
+          animate={{
+            top: 0,
+            transition: {
+              delay: 0.5,
+            },
+          }}
           exit={{ top: -80 }}
           transition={{
             type: "spring",

@@ -24,7 +24,13 @@ export function Banner() {
         </motion.h3>
       </div>
 
-      <motion.p className="max-w-[512px] rounded-md bg-zinc-50 bg-opacity-75 px-6 py-2 text-center font-serif leading-6 md:text-lg">
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ type: "spring", stiffness: 100, damping: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="max-w-[512px] rounded-md bg-zinc-50 bg-opacity-75 px-6 py-2 text-center font-serif leading-6 md:text-lg"
+      >
         <MotionText
           type="multi"
           text={
@@ -33,7 +39,13 @@ export function Banner() {
         />
       </motion.p>
 
-      <motion.div className="flex w-full flex-col items-center gap-y-4 px-8 md:w-[500px] md:flex-row md:gap-x-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ type: "spring", stiffness: 100, damping: 8, delay: 0.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="flex w-full flex-col items-center gap-y-4 px-8 md:w-[500px] md:flex-row md:gap-x-4"
+      >
         <FMButton
           className="w-full"
           onClick={() => {
@@ -47,16 +59,64 @@ export function Banner() {
         </Button>
       </motion.div>
 
-      <div className="absolute bottom-10 left-28 -z-50 w-full brightness-90 md:bottom-5 md:left-32 lg:bottom-10 lg:left-56">
-        <div className="aspect-square w-32 rounded-full bg-[#F7EE86] md:w-64" />
-      </div>
-      <div className="absolute -bottom-10 left-0 -z-50 w-full brightness-90 md:-bottom-32 lg:-bottom-40">
+      <motion.div className="absolute bottom-10 left-28 -z-50 w-full brightness-90 md:bottom-5 md:left-32 lg:bottom-10 lg:left-56">
+        <motion.div
+          initial={{ y: 20, x: -100, scale: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 50,
+            damping: 8,
+            mass: 1,
+            delay: 2,
+          }}
+          viewport={{ once: true }}
+          whileInView={{ y: 0, x: 0, scale: 1 }}
+          className="aspect-square w-32 rounded-full bg-[#F7EE86] md:w-64"
+        />
+      </motion.div>
+      <motion.div
+        initial={{ y: 200, opacity: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+          damping: 8,
+          mass: 1,
+          delay: 1.5,
+        }}
+        viewport={{ once: true }}
+        whileInView={{ y: 0, opacity: 1 }}
+        className="absolute -bottom-10 left-0 -z-50 w-full brightness-90 md:-bottom-32 lg:-bottom-40"
+      >
         <DesertMountain1 />
-      </div>
-      <div className="absolute -bottom-10 -z-50 w-full brightness-95 md:-bottom-28 lg:-bottom-36">
+      </motion.div>
+      <motion.div
+        initial={{ y: 200, opacity: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+          damping: 8,
+          mass: 1,
+          delay: 1,
+        }}
+        viewport={{ once: true }}
+        animate={{ y: 0, opacity: 1 }}
+        className="absolute -bottom-10 -z-50 w-full brightness-95 md:-bottom-28 lg:-bottom-36"
+      >
         <Desert1 />
-      </div>
-      <div className="md-bottom-10 absolute -bottom-10 -z-50 h-5 w-full bg-[#A2672F] brightness-95 md:-bottom-32 md:h-10 lg:-bottom-40" />
+      </motion.div>
+      <motion.div
+        initial={{ y: 200, opacity: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+          damping: 8,
+          mass: 1,
+          delay: 2,
+        }}
+        viewport={{ once: true }}
+        animate={{ y: 0, opacity: 1 }}
+        className="md-bottom-10 absolute -bottom-10 -z-50 h-5 w-full bg-[#A2672F] brightness-95 md:-bottom-32 md:h-10 lg:-bottom-40"
+      />
     </section>
   );
 }

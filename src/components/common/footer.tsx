@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 import { MotionText } from "@/components/motion/text";
 import { Button, FMButton } from "@/components/ui/button";
@@ -14,10 +15,21 @@ export function Footer() {
       <div className="absolute h-full w-full bg-gradient-to-b from-[#7B3018] to-[#31180E] opacity-75 " />
       <div className="relative flex min-h-96 flex-col items-center justify-center gap-y-8 py-6">
         <h3 className="max-w-[768px] scroll-m-20 text-center font-wildrodeo text-3xl tracking-tight text-zinc-50 md:text-5xl lg:text-6xl">
-          <MotionText text="Ayo Daftarkan dan Serahkan Kreasi Kamu Sekarang!" />
+          <MotionText text="Ayo Daftar dan Serahkan Kreasi Kamu Sekarang" />
         </h3>
 
-        <div className="flex w-full flex-col items-center gap-y-4 px-8 md:w-[500px] md:flex-row md:gap-x-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 8,
+            delay: 0.5,
+          }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex w-full flex-col items-center gap-y-4 px-8 md:w-[500px] md:flex-row md:gap-x-4"
+        >
           <FMButton
             className="w-full"
             onClick={() => {
@@ -29,7 +41,7 @@ export function Footer() {
           <Button variant="default" className="w-full">
             Buku Panduan
           </Button>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
