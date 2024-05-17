@@ -49,6 +49,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button";
     return (
       <motion.div
+        className="w-full"
         initial={{ scale: 1 }}
         whileTap={{ scale: 0.97 }}
         transition={{
@@ -64,7 +65,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           className={cn(buttonVariants({ variant, size, className }))}
           ref={ref}
           {...props}
-        />
+        >
+          {props.children}
+        </Comp>
       </motion.div>
     );
   },
