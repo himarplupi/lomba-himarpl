@@ -21,7 +21,7 @@ export function PosterTheme() {
           <motion.p
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{
               type: "spring",
               damping: 20,
@@ -42,7 +42,7 @@ export function PosterTheme() {
           <motion.p
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{
               type: "spring",
               damping: 20,
@@ -55,7 +55,7 @@ export function PosterTheme() {
           <motion.ol
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             transition={{
               type: "spring",
               damping: 20,
@@ -100,7 +100,7 @@ export function PosterTheme() {
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{
           type: "spring",
           damping: 20,
@@ -114,7 +114,7 @@ export function PosterTheme() {
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{
           type: "spring",
           damping: 20,
@@ -128,7 +128,7 @@ export function PosterTheme() {
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.5 }}
         transition={{
           type: "spring",
           damping: 20,

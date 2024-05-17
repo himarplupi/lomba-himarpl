@@ -27,7 +27,7 @@ export function Footer() {
             delay: 0.5,
           }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
           className="flex w-full flex-col items-center gap-y-4 px-8 md:w-[500px] md:flex-row md:gap-x-4"
         >
           <FMButton

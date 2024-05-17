@@ -31,7 +31,7 @@ export function Timeline() {
               damping: 8,
               mass: 1,
             }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             whileInView={{ y: 0, x: 0, scale: 1 }}
             className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]"
           />
@@ -44,7 +44,7 @@ export function Timeline() {
               damping: 8,
               mass: 1,
             }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             whileInView={{ y: 0, x: 0, scale: 1 }}
             className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]"
           />
@@ -57,7 +57,7 @@ export function Timeline() {
               damping: 8,
               mass: 1,
             }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             whileInView={{ y: 0, x: 0, scale: 1 }}
             className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]"
           />
@@ -70,7 +70,7 @@ export function Timeline() {
               damping: 8,
               mass: 1,
             }}
-            viewport={{ once: true }}
+            viewport={{ once: true, amount: 0.5 }}
             whileInView={{ y: 0, x: 0, scale: 1 }}
             className="relative z-10 mt-20 grid aspect-square w-12 place-content-center rounded-full bg-[#7B3018]"
           />

@@ -24,7 +24,7 @@ export function Countdown() {
         <motion.div
           initial={{ scale: 0.5 }}
           whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{
             type: "spring",
             damping: 20,
@@ -51,6 +51,7 @@ export function Countdown() {
           mass: 1,
           delay: 0.5,
         }}
+        viewport={{ once: true, amount: 0.5 }}
         whileInView={{ y: 0, opacity: 1 }}
         className="absolute top-0 z-10 hidden h-10 justify-between brightness-95 md:flex md:w-full"
       >
@@ -67,6 +68,7 @@ export function Countdown() {
           mass: 1,
           delay: 1,
         }}
+        viewport={{ once: true, amount: 0.5 }}
         whileInView={{ opacity: 1 }}
         className="absolute top-0 -z-10 h-full w-full bg-[url('https://raw.githubusercontent.com/himarplupi/assets-himarpl/main/lomba/bg-wave-sand.jpg')] bg-[length:64px_64px] bg-repeat "
       />

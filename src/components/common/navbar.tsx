@@ -20,7 +20,8 @@ export function Navbar() {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const [isScrolling, setIsScrolling] = useState(false);
   const lenis = useLenis((lenis) => {
-    if (lenis.isScrolling) {
+    if (lenis.isScrolling && !isDrawerOpen) {
+      console.log(isDrawerOpen);
       setIsScrolling(true);
     } else {
       setIsScrolling(false);
@@ -34,7 +35,6 @@ export function Navbar() {
 
     if (isMobile) {
       e.preventDefault();
-      console.log("mobile", isMobile, target);
       setIsDrawerOpen(false);
       lenis.scrollTo(target);
       return;
@@ -106,6 +106,18 @@ export function Navbar() {
         </motion.nav>
       )}
 
+      {isMobile && isDrawerOpen && (
+        <motion.div
+          key="mobile-overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="fixed inset-0 z-40 bg-black/50"
+          onClick={() => setIsDrawerOpen(false)}
+        />
+      )}
+
       {!isScrolling && isMobile && (
         <motion.nav
           key="mobile-drawer"
@@ -126,17 +138,14 @@ export function Navbar() {
           className="fixed z-50 flex w-full items-center justify-center"
         >
           <Drawer
+            onOpenChange={setIsDrawerOpen}
             open={isDrawerOpen}
             modal={false}
-            onOpenChange={(isOpen) => {
-              setIsDrawerOpen(isOpen);
-            }}
           >
             <DrawerTrigger asChild>
               <Button
                 className="mt-4 w-[90vw] px-12 py-2 shadow"
                 variant={"outline"}
-                onClick={() => setIsDrawerOpen(true)}
               >
                 Menu
               </Button>
