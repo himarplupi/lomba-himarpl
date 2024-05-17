@@ -1,11 +1,18 @@
+
+"use client";
+
 import { useEffect, useState } from "react";
 
 export const useMediaQuery = (query: string): boolean => {
-  const [matches, setMatches] = useState<boolean>(
-    window.matchMedia(query).matches,
-  );
+  const [matches, setMatches] = useState<boolean>(false);
+  const [isClient, setIsClient] = useState<boolean>(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
     const mediaQueryList = window.matchMedia(query);
     const documentChangeHandler = () => setMatches(mediaQueryList.matches);
 
@@ -13,7 +20,7 @@ export const useMediaQuery = (query: string): boolean => {
     return () => {
       mediaQueryList.removeEventListener("change", documentChangeHandler);
     };
-  }, [query]);
+  }, [query, isClient]);
 
   return matches;
 };
