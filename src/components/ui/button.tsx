@@ -49,7 +49,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button";
     return (
       <motion.div
-        className="w-full"
+        className="flex w-full items-center justify-center"
         initial={{ scale: 1 }}
         whileTap={{ scale: 0.97 }}
         transition={{
@@ -65,7 +65,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           className={cn(buttonVariants({ variant, size, className }))}
           ref={ref}
           {...props}
-        />
+        >
+          {props.children}
+        </Comp>
       </motion.div>
     );
   },
@@ -113,11 +115,11 @@ const FMButton = ({ className, ...props }: FMButtonProps) => {
           duration: 0.2,
         },
       }}
+      {...props}
       className={cn(
         "radial-gradient relative h-12 rounded-md px-6 py-2 shadow-md",
         className,
       )}
-      {...props}
     >
       <Image
         src={plank}
