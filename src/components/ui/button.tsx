@@ -48,11 +48,24 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
-      <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
+      <motion.div
+        initial={{ scale: 1 }}
+        whileTap={{ scale: 0.97 }}
+        transition={{
+          scale: {
+            type: "spring",
+            stiffness: 10,
+            damping: 5,
+            mass: 0.1,
+          },
+        }}
+      >
+        <Comp
+          className={cn(buttonVariants({ variant, size, className }))}
+          ref={ref}
+          {...props}
+        />
+      </motion.div>
     );
   },
 );
@@ -110,14 +123,14 @@ const FMButton = ({ className, ...props }: FMButtonProps) => {
         alt="Plank background"
         fill
         className={cn(
-          "brightness-100 transition-all duration-200",
+          "opacity-90 brightness-100 transition-all duration-200",
           hovered && "brightness-125",
         )}
       />
       <span className="linear-mask relative block h-full w-full font-western text-2xl font-medium uppercase tracking-wide text-[#E3BB67]">
         {props.children}
       </span>
-      <span className="linear-overlay absolute inset-0 block rounded-md p-px" />
+      <span className="linear-overlay absolute inset-0 block rounded-md p-[2px]" />
     </motion.button>
   );
 };
