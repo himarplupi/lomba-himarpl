@@ -35,15 +35,15 @@ export const ShowCounter = ({
       {isClient && (
         <AnimatePresence>
           <DateTimeDisplay key={days} value={days} type={"Hari"} />
-          <p key="item-1" className="text-9xl">
+          <p key="item-1" className="text-6xl md:text-8xl lg:text-9xl">
             :
           </p>
           <DateTimeDisplay key={hours} value={hours} type={"Jam"} />
-          <p key="item-2" className="text-9xl">
+          <p key="item-2" className="text-6xl md:text-8xl lg:text-9xl">
             :
           </p>
           <DateTimeDisplay key={minutes} value={minutes} type={"Menit"} />
-          <p key="item-3" className="text-9xl">
+          <p key="item-3" className="text-6xl md:text-8xl lg:text-9xl">
             :
           </p>
           <DateTimeDisplay key={seconds} value={seconds} type={"Detik"} />
@@ -63,7 +63,7 @@ export const DateTimeDisplay = ({
   return (
     <div className="relative">
       <motion.div
-        className="mx-6 flex w-20 flex-col items-center justify-center"
+        className="flex w-20 flex-col items-center justify-center md:mx-6"
         initial={{ y: -150, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 75, opacity: 0, position: "absolute" }}
@@ -71,10 +71,12 @@ export const DateTimeDisplay = ({
           ease: "easeOut",
         }}
       >
-        <motion.p className="text-9xl">
+        <motion.p className="text-6xl md:text-8xl lg:text-9xl">
           {(value ?? 0) < 10 ? `0${value}` : value}
         </motion.p>
-        <motion.span className="-mt-6 text-2xl lowercase">{type}</motion.span>
+        <motion.span className="-mt-3 text-xl lowercase md:-mt-6 md:text-2xl">
+          {type}
+        </motion.span>
       </motion.div>
     </div>
   );
