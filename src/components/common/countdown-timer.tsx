@@ -76,7 +76,10 @@ export const DateTimeDisplay = ({
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 75, opacity: 0, position: "absolute" }}
         transition={{
-          ease: "easeOut",
+          type: "spring",
+          damping: 8,
+          stiffness: 100,
+          mass: 1,
         }}
       >
         <motion.p className="text-6xl md:text-8xl lg:text-9xl">
