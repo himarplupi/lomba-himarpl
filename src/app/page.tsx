@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen overflow-hidden">
+      <main className="min-h-screen overflow-hidden xl:container">
         <Banner />
         <Countdown />
         <PosterTheme />
