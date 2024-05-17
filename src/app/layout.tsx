@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 
 import { cn } from "@/lib/utils";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
+      <GoogleTagManager gtmId="G-8LEG34DFTS" />
       <body
         className={cn(
           "bg-background font-sans antialiased",
@@ -54,6 +56,7 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <GoogleAnalytics gaId="G-8LEG34DFTS" />
     </html>
   );
 }
