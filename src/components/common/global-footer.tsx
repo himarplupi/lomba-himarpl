@@ -17,7 +17,7 @@ import {
 
 export function GlobalFooter() {
   return (
-    <footer className="container bg-[#31180E] pt-6 font-serif text-[#E3BB67]">
+    <footer className="container bg-[#31180E] pb-16 pt-6 font-serif text-[#E3BB67] md:pb-0">
       <div className="flex flex-col gap-y-6 md:px-8">
         <div className="flex flex-col items-center gap-2 sm:flex-row">
           <Image

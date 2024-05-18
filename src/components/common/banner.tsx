@@ -31,12 +31,9 @@ export function Banner() {
         viewport={{ once: true, amount: 0.5 }}
         className="max-w-[512px] rounded-md bg-zinc-50 bg-opacity-75 px-6 py-2 text-center font-serif leading-6 md:text-lg"
       >
-        <MotionText
-          type="multi"
-          text={
-            "Lomba ini merupakan bagian dari acara Dies Natalis jurusan Rekayasa Perangkat Lunak ke-5 yang diselenggarakan oleh Himpunan Mahasiswa Rekayasa Perangkat Lunak Universitas Pendidikan Indonesia."
-          }
-        />
+        {
+          "Lomba ini merupakan bagian dari acara Dies Natalis jurusan Rekayasa Perangkat Lunak ke-5 yang diselenggarakan oleh Himpunan Mahasiswa Rekayasa Perangkat Lunak Universitas Pendidikan Indonesia."
+        }
       </motion.p>
 
       <motion.div
