@@ -21,6 +21,7 @@ const config = {
       fontFamily: {
         wildrodeo: ["var(--font-wildrodeo)"],
         western: ["var(--font-western)"],
+        serif: ["var(--font-serif)"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -1,9 +1,15 @@
+import { Lora as FontSerif } from "next/font/google";
 import localFont from "next/font/local";
 
 import { cn } from "@/lib/utils";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
+
+const fontSerif = FontSerif({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
 
 const fontWesternBangBang = localFont({
   src: [
@@ -50,6 +56,7 @@ export default function RootLayout({
       <body
         className={cn(
           "bg-background font-sans antialiased",
+          fontSerif.variable,
           fontWesternBangBang.variable,
           fontWildrodeo.variable,
         )}
