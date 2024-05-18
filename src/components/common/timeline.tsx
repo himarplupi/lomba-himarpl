@@ -85,33 +85,77 @@ export function Timeline() {
             <h4 className="scroll-m-20 font-wildrodeo text-xl font-semibold tracking-tight text-[#31180E] md:text-3xl lg:text-4xl">
               <MotionText text="18 Mei 2024" />
             </h4>
-            <p className="font-serif leading-6 text-[#31180E] md:text-lg">
-              <MotionText text="Pendaftaran dan Penyerahan Poster" />
-            </p>
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                damping: 20,
+                stiffness: 200,
+                delay: 0.5,
+              }}
+              viewport={{ amount: 0.5, once: true }}
+              className="font-serif leading-6 text-[#31180E] md:text-lg"
+            >
+              {"Pendaftaran dan Penyerahan Poster"}
+            </motion.p>
           </div>
           <div>
             <h4 className="scroll-m-20 font-wildrodeo text-xl font-semibold tracking-tight text-[#31180E] md:text-3xl lg:text-4xl">
               <MotionText text="8 Juni 2024" />
             </h4>
-            <p className="font-serif leading-6 text-[#31180E] md:text-lg">
-              <MotionText text="Akhir Masa Pendaftaran dan Penyerahan Poster" />
-            </p>
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                damping: 20,
+                stiffness: 200,
+                delay: 0.5,
+              }}
+              viewport={{ amount: 0.5, once: true }}
+              className="font-serif leading-6 text-[#31180E] md:text-lg"
+            >
+              {"Akhir Masa Pendaftaran dan Penyerahan Poster"}
+            </motion.p>
           </div>
           <div>
             <h4 className="scroll-m-20 font-wildrodeo text-xl font-semibold tracking-tight text-[#31180E] md:text-3xl lg:text-4xl">
               <MotionText text="9 hingga 12 Juni 2024" />
             </h4>
-            <p className="font-serif leading-6 text-[#31180E] md:text-lg">
-              <MotionText text="Masa Penilaian Poster" />
-            </p>
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                damping: 20,
+                stiffness: 200,
+                delay: 0.5,
+              }}
+              viewport={{ amount: 0.5, once: true }}
+              className="font-serif leading-6 text-[#31180E] md:text-lg"
+            >
+              {"Masa Penilaian Poster"}
+            </motion.p>
           </div>
           <div>
             <h4 className="scroll-m-20 font-wildrodeo text-xl font-semibold tracking-tight text-[#31180E] md:text-3xl lg:text-4xl">
               <MotionText text="13 Juni 2024" />
             </h4>
-            <p className="font-serif leading-6 text-[#31180E] md:text-lg">
-              <MotionText text="Pengumuman Pemenang Lomba" />
-            </p>
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                type: "spring",
+                damping: 20,
+                stiffness: 200,
+                delay: 0.5,
+              }}
+              viewport={{ amount: 0.5, once: true }}
+              className="font-serif leading-6 text-[#31180E] md:text-lg"
+            >
+              {"Pengumuman Pemenang Lomba"}
+            </motion.p>
           </div>
         </div>
       </div>

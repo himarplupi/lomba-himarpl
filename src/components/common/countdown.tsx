@@ -42,6 +42,23 @@ export function Countdown() {
         <BGCountdown />
       </div>
 
+      <div className="mt-4">
+        <motion.p
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 200,
+            delay: 2,
+          }}
+          className="text-center font-serif text-lg text-[#31180E] md:text-xl lg:text-2xl"
+        >
+          {"*Menuju akhir masa pendaftaran dan penyerahan Poster"}
+        </motion.p>
+      </div>
+
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         transition={{
