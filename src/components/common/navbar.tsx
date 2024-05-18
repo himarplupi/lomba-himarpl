@@ -2,9 +2,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
-import { Button } from "@/components/ui/button";
+import { Button, FMButton } from "@/components/ui/button";
 import {
   Drawer,
   DrawerContent,
@@ -16,6 +17,7 @@ import DiesNatalis from "@/images/logo-dies-natalis.png";
 import { useLenis } from "@/lib/lenis";
 
 export function Navbar() {
+  const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isMobile] = useMediaQuery("(max-width: 768px)");
   const [isScrolling, setIsScrolling] = useState(false);
@@ -33,8 +35,9 @@ export function Navbar() {
     const target = e.currentTarget.getAttribute("href");
     if (!target) return;
 
+    e.preventDefault();
+
     if (isMobile) {
-      e.preventDefault();
       setIsDrawerOpen(false);
       lenis.scrollTo(target);
       return;
@@ -101,24 +104,22 @@ export function Navbar() {
                   Jadwal Lomba
                 </Link>
               </li>
+              <li>
+                <FMButton
+                  className="w-full"
+                  onClick={() => {
+                    router.push("https://forms.gle/8Jwc16FX2u8RGkgq5");
+                  }}
+                >
+                  Daftar Sekarang
+                </FMButton>
+              </li>
             </ul>
           </motion.div>
         </motion.nav>
       )}
 
-      {isMobile && isDrawerOpen && (
-        <motion.div
-          key="mobile-overlay"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-40 bg-black/50"
-          onClick={() => setIsDrawerOpen(false)}
-        />
-      )}
-
-      {!isScrolling && isMobile && (
+      {isMobile && (
         <motion.nav
           key="mobile-drawer"
           initial={{ bottom: -80 }}
@@ -147,7 +148,7 @@ export function Navbar() {
                 className="mt-4 w-[90vw] px-12 py-2 shadow"
                 variant={"outline"}
               >
-                Menu
+                Navigasi
               </Button>
             </DrawerTrigger>
             <DrawerContent>
@@ -188,6 +189,16 @@ export function Navbar() {
                   >
                     Jadwal Lomba
                   </Link>
+                </li>
+                <li>
+                  <FMButton
+                    className="w-full"
+                    onClick={() => {
+                      router.push("https://forms.gle/8Jwc16FX2u8RGkgq5");
+                    }}
+                  >
+                    Daftar Sekarang
+                  </FMButton>
                 </li>
               </ul>
             </DrawerContent>
