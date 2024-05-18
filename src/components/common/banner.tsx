@@ -51,7 +51,13 @@ export function Banner() {
         >
           Daftar Sekarang
         </FMButton>
-        <Button variant="default" className="w-full">
+        <Button 
+          variant="default" 
+          className="w-full"
+          onClick={() => {
+            router.push("https://raw.githubusercontent.com/himarplupi/assets-himarpl/main/lomba/buku-panduan-lomba-dies-natalis-rpl-5.pdf");
+          }}
+         >
           Buku Panduan
         </Button>
       </motion.div>
