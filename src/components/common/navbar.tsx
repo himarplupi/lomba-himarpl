@@ -67,7 +67,7 @@ export function Navbar() {
           }}
           className="fixed bottom-0 z-50 w-full flex-col items-center justify-center md:bottom-auto md:flex"
         >
-          <motion.div className="mt-4 hidden w-[90vw] items-center justify-between rounded-md border border-zinc-200 bg-zinc-50 px-12 py-2 shadow md:flex xl:w-[1280px]">
+          <motion.div className="mt-4 hidden w-[90vw] items-center justify-between gap-x-4 rounded-md border border-zinc-200 bg-zinc-50 px-6 py-2 shadow md:flex lg:px-12 xl:w-[1280px]">
             <Link href="#banner" onClick={handleClick}>
               <Image
                 src={DiesNatalis}
@@ -76,35 +76,35 @@ export function Navbar() {
                 height={42}
               />
             </Link>
-            <ul className="flex items-center gap-x-6">
-              <li>
+            <ul className="flex items-center justify-center gap-x-6">
+              <li className="grid place-content-center">
                 <Link
                   onClick={handleClick}
                   href="#countdown"
-                  className="font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
+                  className="text-center font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
                 >
                   Hitung Mundur
                 </Link>
               </li>
-              <li>
+              <li className="grid place-content-center">
                 <Link
                   onClick={handleClick}
                   href="#poster-theme"
-                  className="font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
+                  className="text-center font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
                 >
                   Tema Poster
                 </Link>
               </li>
-              <li>
+              <li className="grid place-content-center">
                 <Link
                   onClick={handleClick}
                   href="#timeline"
-                  className="font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
+                  className="text-center font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
                 >
                   Jadwal Lomba
                 </Link>
               </li>
-              <li>
+              <li className="grid place-content-center">
                 <FMButton
                   className="w-full"
                   onClick={() => {
@@ -163,34 +163,34 @@ export function Navbar() {
                 </Link>
               </DrawerHeader>
               <ul className="mx-auto flex w-fit flex-col items-center gap-y-6 pb-8">
-                <li>
+                <li className="grid place-content-center">
                   <Link
                     href="#countdown"
-                    className="font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
+                    className="text-center font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
                     onClick={handleClick}
                   >
                     Hitung Mundur
                   </Link>
                 </li>
-                <li>
+                <li className="grid place-content-center">
                   <Link
                     href="#poster-theme"
-                    className="font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
+                    className="text-center font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
                     onClick={handleClick}
                   >
                     Tema Poster
                   </Link>
                 </li>
-                <li>
+                <li className="grid place-content-center">
                   <Link
                     href="#timeline"
-                    className="font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
+                    className="text-center font-wildrodeo text-2xl leading-6 text-[#7B3018] hover:underline"
                     onClick={handleClick}
                   >
                     Jadwal Lomba
                   </Link>
                 </li>
-                <li>
+                <li className="grid place-content-center">
                   <FMButton
                     className="w-full"
                     onClick={() => {
