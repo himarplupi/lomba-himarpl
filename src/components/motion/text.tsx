@@ -104,7 +104,9 @@ export function MotionText({
                     {char}
                   </motion.span>
                 ))}
-                <span className="inline-block">&nbsp;</span>
+                {j !== line.split(" ").length - 1 && (
+                  <span className="inline-block">&nbsp;</span>
+                )}
               </span>
             ))}
           </span>
