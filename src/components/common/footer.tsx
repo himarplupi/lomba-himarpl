@@ -28,7 +28,7 @@ export function Footer() {
               type: "spring",
               stiffness: 100,
               damping: 8,
-              delay: 0.5,
+              delay: 1,
             }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
@@ -58,7 +58,7 @@ export function Footer() {
               type: "spring",
               stiffness: 100,
               damping: 8,
-              delay: 0.5,
+              delay: 2,
             }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
