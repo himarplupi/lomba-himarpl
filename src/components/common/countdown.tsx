@@ -9,7 +9,7 @@ import { MotionText } from "@/components/motion/text";
 import { ShowCounter, useCountdown } from "./countdown-timer";
 
 export function Countdown() {
-  const [days, hours, minutes, seconds] = useCountdown("2024-06-08");
+  const [days, hours, minutes, seconds] = useCountdown("2024-06-08T16:59:00Z");
 
   return (
     <section
