@@ -32,13 +32,14 @@ export function Countdown() {
           }}
           className="absolute left-0 right-0 z-10 flex items-center justify-center font-western text-[#E6E7CB]"
         >
-          {(seconds < 0 && minutes < 0 && hours < 0) ? <ExpiredNotive/> : 
+          
+          {(!seconds && !minutes && !hours) && ((seconds < 0 && minutes < 0 && hours < 0) ? <ExpiredNotive/> : 
           <ShowCounter
             days={days}
             hours={hours}
             minutes={minutes}
             seconds={seconds}
-          />}
+          />)}
         </motion.div>
         <BGCountdown />
       </div>
