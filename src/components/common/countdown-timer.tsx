@@ -5,9 +5,28 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export const ExpiredNotice = () => {
   return (
-    <div className="expired-notice">
-      <span>Expired!!!</span>
-      <p className="text-2xl">Please select a future date and time.</p>
+    <div className="flex">
+        <AnimatePresence>
+          <DateTimeDisplay value={0} type={"Hari"} />
+          <p key="item-1" className="text-6xl md:text-8xl lg:text-9xl">
+            :
+          </p>
+          <DateTimeDisplay value={0} type={"Jam"} />
+          <p key="item-2" className="text-6xl md:text-8xl lg:text-9xl">
+            :
+          </p>
+          <DateTimeDisplay
+            value={0}
+            type={"Menit"}
+          />
+          <p key="item-3" className="text-6xl md:text-8xl lg:text-9xl">
+            :
+          </p>
+          <DateTimeDisplay
+            value={0}
+            type={"Detik"}
+          />
+        </AnimatePresence>
     </div>
   );
 };
