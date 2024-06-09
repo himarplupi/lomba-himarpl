@@ -6,7 +6,7 @@ import { FlagLeft, FlagRight } from "@/components/background/flag";
 import { BGCountdown } from "@/components/background/wood";
 import { MotionText } from "@/components/motion/text";
 
-import { ShowCounter, useCountdown, ExpiredNotice } from "./countdown-timer";
+import { ExpiredNotice, ShowCounter, useCountdown } from "./countdown-timer";
 
 export function Countdown() {
   const [days, hours, minutes, seconds] = useCountdown("2024-06-08T16:59:00Z");
@@ -32,14 +32,19 @@ export function Countdown() {
           }}
           className="absolute left-0 right-0 z-10 flex items-center justify-center font-western text-[#E6E7CB]"
         >
-          
-          {(!seconds && !minutes && !hours) && ((seconds < 0 && minutes < 0 && hours < 0) ? <ExpiredNotive/> : 
-          <ShowCounter
-            days={days}
-            hours={hours}
-            minutes={minutes}
-            seconds={seconds}
-          />)}
+          {seconds &&
+            minutes &&
+            hours &&
+            (seconds < 0 && minutes < 0 && hours < 0 ? (
+              <ExpiredNotice />
+            ) : (
+              <ShowCounter
+                days={days}
+                hours={hours}
+                minutes={minutes}
+                seconds={seconds}
+              />
+            ))}
         </motion.div>
         <BGCountdown />
       </div>
