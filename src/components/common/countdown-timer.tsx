@@ -7,16 +7,15 @@ export const ExpiredNotice = () => {
   return (
     <div className="flex">
         <AnimatePresence>
-          <DateTimeDisplay key={`Hari${days}`} value={0} type={"Hari"} />
+          <DateTimeDisplay value={0} type={"Hari"} />
           <p key="item-1" className="text-6xl md:text-8xl lg:text-9xl">
             :
           </p>
-          <DateTimeDisplay key={`Jam${hours}`} value={0} type={"Jam"} />
+          <DateTimeDisplay value={0} type={"Jam"} />
           <p key="item-2" className="text-6xl md:text-8xl lg:text-9xl">
             :
           </p>
           <DateTimeDisplay
-            key={`Menit${minutes}`}
             value={0}
             type={"Menit"}
           />
@@ -24,7 +23,6 @@ export const ExpiredNotice = () => {
             :
           </p>
           <DateTimeDisplay
-            key={`Detik${seconds}`}
             value={0}
             type={"Detik"}
           />
